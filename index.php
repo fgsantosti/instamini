@@ -5,6 +5,8 @@ require_once('conn.php');
 // Selecionando fotos
 $result = $conn->query('SELECT id, nome, tipo, tamanho FROM fotos1');
 ?>
+
+<h3>Lista de Imagens</h3>
 <div class="row">
         <?php while($foto = $result->fetch(PDO::FETCH_OBJ)): ?>
             <div class="col-sm-6 col-md-4">
