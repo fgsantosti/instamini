@@ -1,14 +1,14 @@
 <?php
 // Incluindo arquivo de conexão
-require_once('conn.php');
+require_once 'conn.php';
  
 $id = (int) $_GET['id'];
  
 // Selecionando fotos
-$result = $conn->query("SELECT conteudo, tipo FROM fotos1 WHERE id = '{$id}'");
-$result->bindParam(':id', $id, PDO::PARAM_INT);
+$result = $conn->query("SELECT conteudo, tipo FROM fotos WHERE id = '{$id}'");
+
  
-// Se executado
+// Se executar corretamente
 if ($result->execute()){
     // Alocando foto
     $foto = $result->fetch(PDO::FETCH_OBJ);
